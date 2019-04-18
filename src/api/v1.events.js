@@ -19,7 +19,7 @@ const events = io => {
       const reply = eliza.transform(payload);
 
       const message = {display: reply};
-      socket.emit('output', message);
+      socket.emit('output', reply);
 
     });
     socket.on('disconnect', () => console.log(`Goodbye client: ${socket.id}`));
